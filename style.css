@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Cardo', serif;
+  font-size: 12px;
+}
+
+.planet {
+  display: flex;
+  flex-direction: column;
+}
+
+.planet h2 {
+  color: #fff;
+  font-size: 4em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.planet .containar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-box-reflect: below 1px linear-gradient(#0001,#0002);
+}
+
+.planetEarth {
+  position: relative;
+  min-width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #7A0BC0;
+}
+
+.planetEarth .loader {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.planetEarth .loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #FBCAFF);
+  background-size: 200px 300px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+
+.planetEarth .loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #FBCAFF,
+    0 0 10px #FBCAFF,
+    0 0 20px #FBCAFF,
+    0 0 30px #FBCAFF,
+    0 0 40px #FBCAFF,
+    0 0 50px #FBCAFF,
+    0 0 60px #FBCAFF,
+    0 0 70px #FBCAFF,
+    0 0 80px #FBCAFF;
+    0 0 90px #FBCAFF;
+}
+
+.planetEarth .loader span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #7A0BC0;
+  border-radius: 50%;
+}
+
+.earth {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: url(uzayliAkbar.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  box-shadow: inset 0 0 20px #FBCAFF, 0 0 120px #FBCAFF;
+  animation: animateEarth 5s linear infinite;
+}
+
+@keyframes animateEarth {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+
+
+
+
+
+
+.planetMars {
+  position: relative;
+  min-width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #182357;
+}
+
+.planetMars .loader {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  animation: animated 4s linear infinite;
+}
+
+@keyframes animated {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.planetMars .loader::before {
+  content: '';
+  position: absolute;
+  transform: rotateY(180deg);
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+  background-size: 200px 300px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+
+.planetMars .loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #00fff9;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #00fff9,
+    0 0 10px #00fff9,
+    0 0 20px #00fff9,
+    0 0 30px #00fff9,
+    0 0 40px #00fff9,
+    0 0 50px #00fff9,
+    0 0 60px #00fff9,
+    0 0 70px #00fff9,
+    0 0 80px #00fff9;
+}
+
+.planetMars .loader span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #182357;
+  border-radius: 50%;
+}
+
+.mars {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: url(flyingAkbar.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+  animation: animateMars 5s linear infinite;
+}
+
+@keyframes animateMars {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+}
